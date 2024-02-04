@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Food Delivery</string>
+    <string name="choose_your_location">Choose Your Location</string>
+    <string name="text_design_by_neatrootsview">TextDesign By \nNeatRootsView</string>
+    <string name="choose_location">Choose location</string>
+    <string name="do_you_want_to_continue_with_this_selected_country">Do you want to continue with this selected country?</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="are_you_sure_you_want_to_start_a_new_activity_with_the_selected_location">Are you sure you want to start a new activity with the selected location?</string>
 </resources>
