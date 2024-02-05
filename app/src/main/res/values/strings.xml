@@ -6,4 +6,7 @@
     <string name="do_you_want_to_continue_with_this_selected_country">Do you want to continue with this selected country?</string>
     <string name="confirmation">Confirmation</string>
     <string name="are_you_sure_you_want_to_start_a_new_activity_with_the_selected_location">Are you sure you want to start a new activity with the selected location?</string>
+    <string name="explore_your_favorite_food">Explore Your Favorite Food</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
