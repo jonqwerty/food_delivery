@@ -16,5 +16,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/popular"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:fontFamily="@font/yeonsung"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
+
+    <TextView
+        android:id="@+id/go_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/view_menu"
+        android:elevation="10dp"
+        android:shadowColor="@color/startRedColor"
+        android:outlineAmbientShadowColor="@color/startRedColor"
+        android:outlineSpotShadowColor="@color/startRedColor"
+        android:textSize="16sp"
+        android:textColor="@color/startRedColor"
+        android:textStyle="bold"
+        android:fontFamily="@font/lato"
+        android:background="@drawable/text_view_bg"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_RV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/recyclerViewColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_menu"
+         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
