@@ -3,7 +3,6 @@
     <string name="choose_your_location">Choose Your Location</string>
     <string name="text_design_by_neatrootsview">TextDesign By \nNeatRootsView</string>
     <string name="choose_location">Choose location</string>
-    <string name="do_you_want_to_continue_with_this_selected_country">Do you want to continue with this selected country?</string>
     <string name="confirmation">Confirmation</string>
     <string name="are_you_sure_you_want_to_start_a_new_activity_with_the_selected_location">Are you sure you want to start a new activity with the selected location?</string>
     <string name="explore_your_favorite_food">Explore Your Favorite Food</string>
@@ -13,4 +12,5 @@
     <string name="view_menu">View Menu</string>
     <string name="food_name">Food Name</string>
     <string name="short_description">Short description</string>
+    <string name="menu">Menu</string>
 </resources>

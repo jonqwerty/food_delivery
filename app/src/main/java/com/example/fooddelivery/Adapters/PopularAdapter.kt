@@ -12,7 +12,7 @@ import com.example.fooddelivery.databinding.HomeFoodItemBinding
 
 class PopularAdapter(
     val context : Context,
-    val list : ArrayList<PopularModel>
+    var list : ArrayList<PopularModel>
 ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
 
 
@@ -20,20 +20,20 @@ class PopularAdapter(
         parent: ViewGroup,
         viewType: Int
     ): PopularAdapter.PopularViewHolder {
-        val binding = HomeFoodItemBinding.inflate(LayoutInflater.from(context), parent, false )
+        val binding = HomeFoodItemBinding.inflate(LayoutInflater.from(context), parent, false)
         return PopularViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PopularAdapter.PopularViewHolder, position: Int) {
 
-        val  listModel = list[position]
+        val listModel = list[position]
 
         holder.foodName.text = listModel.getFoodName()
         holder.foodPrice.text = listModel.getFoodPrice()
         listModel.getFoodImage()?.let { holder.foodImage.setImageResource(it) }
 
-        holder.item.setOnClickListener{
-            val intent = Intent(context, DetailsActivity :: class.java)
+        holder.item.setOnClickListener {
+            val intent = Intent(context, DetailsActivity::class.java)
             intent.putExtra("foodImage", listModel.getFoodImage())
             intent.putExtra("foodName", listModel.getFoodName())
             context.startActivity(intent)
@@ -45,7 +45,7 @@ class PopularAdapter(
         return list.size
     }
 
-    class PopularViewHolder(binding : HomeFoodItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class PopularViewHolder(binding: HomeFoodItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val foodImage = binding.homeFoodImage
         val foodName = binding.homeFoodName
@@ -54,4 +54,11 @@ class PopularAdapter(
         val item = binding.root
 
     }
+
+    fun updateList(newList: ArrayList<PopularModel>) {
+        list = newList
+
+        notifyDataSetChanged()
+    }
+
 }
