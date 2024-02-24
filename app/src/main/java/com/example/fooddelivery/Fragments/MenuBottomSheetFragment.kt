@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.Adapters.PopularAdapter
 import com.example.fooddelivery.Models.PopularModel
+import com.example.fooddelivery.Models.SharedModel
 import com.example.fooddelivery.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -28,6 +30,8 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     private lateinit var menuList : ArrayList<PopularModel>
     private lateinit var menuRv :RecyclerView
 
+    private lateinit var sharedModel : SharedModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,6 +43,9 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_menu_bottom_sheet, container, false)
+
+        sharedModel = ViewModelProvider(requireActivity()).get(SharedModel :: class.java)
+
 
         menuList = ArrayList()
         menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
@@ -55,6 +62,8 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
         menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
 
         adapter = PopularAdapter(requireContext(), menuList)
+        adapter.setSharedModel(sharedModel)
+
         menuRv = view.findViewById(R.id.menu_RV)
 
         menuRv.layoutManager = LinearLayoutManager(requireContext())
