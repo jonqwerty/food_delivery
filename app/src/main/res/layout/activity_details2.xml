@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_stack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/simpleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/startRedColor"
+        android:fontFamily="@font/yeonsung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_stack" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/name_l"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="8dp"
+        android:elevation="2dp"
+        android:outlineSpotShadowColor="@color/startRedColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleText" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/yeonsung"
+         />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/lato"
+            android:text="Name"
+            android:inputType="text"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/address_l"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="8dp"
+        android:elevation="2dp"
+        android:outlineSpotShadowColor="@color/startRedColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_l" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/yeonsung"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/lato"
+            android:text="Lorem ipsum is placeholder text
+commonly used in the graphic,
+print, and publishing industries
+for previewing layouts and visual "
+            android:inputType="textMultiLine"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/phone_l"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="8dp"
+        android:elevation="2dp"
+        android:outlineSpotShadowColor="@color/startRedColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_l" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/yeonsung"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/lato"
+            android:inputType="phone"
+            android:text="+1234567890"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@+id/p_method"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="8dp"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_l" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:text="Payment Method"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_payment"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@+id/total_price"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="8dp"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_method" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:text="Total Amount"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:layout_marginEnd="64dp"
+            android:text="$0"
+            android:textColor="@color/startRedColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/place_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Place My Order"
+        android:textSize="24sp"
+        android:textColor="@color/startRedColor"
+        android:background="@drawable/edit_text_bg"
+        android:shadowColor="@color/endRedColor"
+        android:outlineSpotShadowColor="@color/startRedColor"
+        android:outlineAmbientShadowColor="@color/startRedColor"
+        android:textAllCaps="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
