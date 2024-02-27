@@ -1,5 +1,6 @@
 package com.example.fooddelivery
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -41,6 +42,11 @@ class CartFragment : Fragment() {
 
         binding.cartRv.layoutManager = LinearLayoutManager(requireContext())
         binding.cartRv.adapter = adapter
+
+        binding.proceedBtn.setOnClickListener{
+            val intent = Intent(requireContext(), Details :: class.java)
+            startActivity(intent)
+        }
 
 
         return binding.root

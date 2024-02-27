@@ -49,4 +49,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.0")
+
+    implementation("com.airbnb.android:lottie:5.1.1")
 }
