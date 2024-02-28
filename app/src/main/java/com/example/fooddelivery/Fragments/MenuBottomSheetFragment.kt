@@ -48,18 +48,17 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
 
 
         menuList = ArrayList()
-        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
+        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
+
+        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
+
+        menuList.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        menuList.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
 
         adapter = PopularAdapter(requireContext(), menuList)
         adapter.setSharedModel(sharedModel)

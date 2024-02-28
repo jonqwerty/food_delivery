@@ -36,18 +36,19 @@ class SearchFragment : Fragment() {
 
 
         list = ArrayList()
-        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        list.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        list.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        list.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        list.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        list.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        list.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
-        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", "7$",1))
-        list.add(PopularModel(R.drawable.pop_menu_2, "Food", "2$",1))
-        list.add(PopularModel(R.drawable.pop_menu_3, "momo", "9$",1))
+        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        list.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        list.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
+
+        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        list.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        list.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
+
+        list.add(PopularModel(R.drawable.pop_menu_1, "Sandwich", 7,7,1))
+        list.add(PopularModel(R.drawable.pop_menu_2, "Food", 2,2,1))
+        list.add(PopularModel(R.drawable.pop_menu_3, "momo", 5,5,1))
+
+
 
         adapter = PopularAdapter(requireContext(), list)
         adapter.setSharedModel(sharedModel)

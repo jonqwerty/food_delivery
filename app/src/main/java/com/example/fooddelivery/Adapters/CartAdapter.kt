@@ -25,14 +25,20 @@ class CartAdapter(
         val listModel = list[position]
 
         holder.foodName.text = listModel.getFoodName()
-        holder.foodPrice.text = listModel.getFoodPrice()
+        holder.foodPrice.text = listModel.getFoodPrice().toString()
         listModel.getFoodImage()?.let { holder.foodImage.setImageResource(it) }
+        holder.foodCount.text = listModel.getFoodCount().toString()
+
+
 
         holder.plus.setOnClickListener{
 
             if (listModel.getFoodCount() < 10){
-                val count = listModel.getFoodCount() +1
+                val count = listModel.getFoodCount() + 1
                 listModel.setFoodCount(count)
+                val price = listModel.getFoodPriceConstant() * listModel.getFoodCount()
+                listModel.setFoodPrice(price)
+                holder.foodPrice.text = listModel.getFoodPrice().toString()
                 holder.foodCount.text = listModel.getFoodCount().toString()
             }
 
@@ -43,6 +49,9 @@ class CartAdapter(
             if (listModel.getFoodCount() > 1){
                 val count = listModel.getFoodCount() - 1
                 listModel.setFoodCount(count)
+                val price = listModel.getFoodPriceConstant() * listModel.getFoodCount()
+                listModel.setFoodPrice(price)
+                holder.foodPrice.text = listModel.getFoodPrice().toString()
                 holder.foodCount.text = listModel.getFoodCount().toString()
             }
             else{

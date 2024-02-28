@@ -24,5 +24,8 @@ class Details : AppCompatActivity() {
             bottomFragment.show(supportFragmentManager, "Test")
 
         }
+
+        val totalPrice = intent.getStringExtra("totalPrice")
+        binding.price.text = totalPrice
     }
 }
