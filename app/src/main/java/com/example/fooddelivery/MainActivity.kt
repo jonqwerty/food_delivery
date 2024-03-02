@@ -2,6 +2,7 @@ package com.example.fooddelivery
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -21,41 +22,15 @@ class MainActivity : AppCompatActivity() {
         val bottomNavView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navigationView = findNavController(R.id.fragment_container)
 
+        val notification_btn = findViewById<ImageView>(R.id.bell_not)
+
+        notification_btn.setOnClickListener {
+            val bottomSheetDialogFragment = NotificationBottomFragment()
+            bottomSheetDialogFragment.show(supportFragmentManager, "Test")
+        }
+
         bottomNavView.setupWithNavController(navigationView)
 
-//        changeFragment(HomeFragment())
 
-//        binding.bottomNavigationView.setOnItemSelectedListener {
-//            when(it.itemId) {
-//                R.id.home ->{
-//                    changeFragment(HomeFragment())
-//                }
-//
-//                R.id.cart ->{
-//                    changeFragment(CartFragment())
-//                }
-//
-//                R.id.search ->{
-//                    changeFragment(SearchFragment())
-//                }
-//
-//                R.id.history ->{
-//                    changeFragment(HistoryFragment())
-//                }
-//
-//                R.id.profile ->{
-//                    changeFragment(ProfileFragment())
-//                }
-//            }
-//            return@setOnItemSelectedListener true
-//        }
-//    }
-//
-//    fun changeFragment (fragment:Fragment){
-//        val fragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.id.fragment_container, fragment)
-//        fragmentTransaction.commit()
-//
     }
 }
